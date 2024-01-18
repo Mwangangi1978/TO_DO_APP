@@ -7,6 +7,8 @@ import { Flex, Box, Button } from '@chakra-ui/react'
 
 
 const Home =()=>{
+
+    
     return(
         <Box>
             <Flex direction={'column'}>
@@ -24,3 +26,5 @@ const Home =()=>{
         </Box>
     )
 }
+
+export default Home;

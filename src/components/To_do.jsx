@@ -1,14 +1,13 @@
 import { DeleteIcon, CheckIcon } from "@chakra-ui/icons";
-import { Text, Flex } from "@chakra-ui/react";
+import { Text, Flex, Checkbox } from "@chakra-ui/react";
 
 const ToDo = (props)=>{
     return(
         <Flex direction={'column'}>
-            <Text>All your notes here...</Text>
+            <Text><em>All your notes here...</em></Text>
             <Flex align={'center'}>
-                <p></p>
+                <Checkbox size={'md'} colorScheme="green" isChecked={props.isChecked}>{props.todo}</Checkbox>
                 <DeleteIcon/>
-                <CheckIcon/>
             </Flex>
         </Flex>
     )
