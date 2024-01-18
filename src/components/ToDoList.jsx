@@ -1,6 +1,6 @@
 
 import { useSelector } from "react-redux";
-import ToDoItem from "./TodoItem";
+import ToDoItem from "./ToDoItem";
 import { getFilteredToDos } from '../selectors';
 import { Text } from "@chakra-ui/react";
 
