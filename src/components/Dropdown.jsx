@@ -1,10 +1,22 @@
 import { Select } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
+import { filterToDo } from '../Redux/actions';
+import { createSelector } from 'reselect';
 
-const DropDown = (props)=>{
+
+const DropDown = ()=>{
+    const dispatch = useDispatch()
+    const currentFilter = useSelector((state)=>(
+        state.filter
+    ))
+    const handleFilter = (filter)=>{
+        dispatch(filterToDo(filter))
+    }
     return(
-        <Select placeholder='Default'>
-            <option value='option1'>Complete</option>
-            <option value='option2'>Incomplete</option>
+        <Select _focus={'none'} borderColor={'gray-300'} color={'black'} value={currentFilter} onChange={(e)=> handleFilter(e.target.value)}>
+            <option value='ALL'>Default</option>
+            <option value='COMPLETED'>Completed</option>
+            <option value='INCOMPLETE'>Incomplete</option>
         </Select>
     )
 }

@@ -1,4 +1,4 @@
-import { ADD_TO_DO, MARK_ALL_COMPLETED, TOGGLE_TO_DO, REMOVE_TO_DO, UPDATE_SEARCH_TERM } from "./actionTypes";
+import { ADD_TO_DO, MARK_ALL_COMPLETED, TOGGLE_TO_DO, REMOVE_TO_DO, UPDATE_SEARCH_TERM , FILTER_TO_DO} from "./actionTypes";
 
 const initialState ={
     toDos: [],
@@ -37,7 +37,7 @@ export const toDoReducer = (state= initialState, action)=>{
                 filter: state.filter,
                 searchTerm: state.searchTerm
         }
-        case FILTER_DAOS:
+        case FILTER_TO_DO:
             return{
                 toDos: state.toDos,
                 filter: action.payload.filter,

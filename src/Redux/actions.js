@@ -1,11 +1,11 @@
-import { ADD_TO_DO, MARK_COMPLETED, MARK_INCOMPLETE, REMOVE_TO_DO, TOGGLE_TO_DO, UPDATE_SEARCH_TERM } from "./actionTypes";
+import { ADD_TO_DO, FILTER_TO_DO, MARK_ALL_COMPLETED, REMOVE_TO_DO, TOGGLE_TO_DO, UPDATE_SEARCH_TERM } from "./actionTypes";
 
-export const addTodo =(text) =>({
+export const addToDo =(text) =>({
     type: ADD_TO_DO,
     payload:{text}
 });
 
-export const removeTodo =(id) =>({
+export const removeToDo =(id) =>({
     type: REMOVE_TO_DO,
     payload:{id}
 })
@@ -22,7 +22,7 @@ export const updateSearchTerm =(searchTerm) =>({
     payload:{searchTerm}
 })
 
-export const filterTodo =(filter) =>({
+export const filterToDo =(filter) =>({
     type: FILTER_TO_DO,
     payload:{filter}
 })

@@ -1,13 +1,18 @@
 import { AddIcon, SearchIcon } from "@chakra-ui/icons";
-import { Input, InputGroup, InputLeftElement} from '@chakra-ui/react';
+import { Input, InputGroup, InputRightElement} from '@chakra-ui/react';
+import { createSelector } from 'reselect';
 
-const Input = (props)=>{
+
+const Field = (props)=>{
     return(
-        <InputGroup>
-            <InputLeftElement>
-                {props.type == 'search'? <SearchIcon color={'blue'}/> : <AddIcon color={'blue'}/>}
-            </InputLeftElement>
-            <Input 
+        <InputGroup margin={'5px'}>
+            <InputRightElement cursor={'pointer'}>
+                {props.type == 'search'? <SearchIcon color={'blue'} onClick={props.onSearch}/> : <AddIcon color={'blue'} onClick={props.onAdd}/>}
+            </InputRightElement>
+            <Input
+                name={props.name}
+                value={props.value}
+                onChange={props.onChange}
                 variant='outline' 
                 placeholder={props.type == 'search'? "Search Todos" : "Add Todo"}
             />
@@ -15,4 +20,4 @@ const Input = (props)=>{
     )
 }
 
-export default Input;
+export default Field;
