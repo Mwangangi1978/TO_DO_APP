@@ -1,14 +1,12 @@
 import { Select } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterToDo } from '../Redux/actions';
-import { createSelector } from 'reselect';
+
 
 
 const DropDown = ()=>{
     const dispatch = useDispatch()
-    const currentFilter = useSelector((state)=>(
-        state.filter
-    ))
+    const currentFilter = useSelector((state)=> state.filter);
     const handleFilter = (filter)=>{
         dispatch(filterToDo(filter))
     }
