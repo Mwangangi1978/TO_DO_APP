@@ -14,7 +14,7 @@ const TodoItem = ({ toDo, index }) => {
             
             <Flex align={'center'}>
                 <div >   
-                        <Flex  key={index} index={index} style={{alignItems: 'center'}} >
+                        <Flex  style={{alignItems: 'center'}} >
                             <span style={{marginRight: '5px'}}>{index + 1}</span>
                             <Checkbox
                                 size={'md'}
@@ -23,7 +23,7 @@ const TodoItem = ({ toDo, index }) => {
                                 borderBottom={"1px"}
                                 borderColor={'black'}
                                 cursor={'pointer'}
-                                onClick={()=> dispatch(toggleToDo(index))}
+                                onChange={()=> dispatch(toggleToDo(index))}
                             >
                                 <Text
                                     style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}

@@ -4,7 +4,7 @@ import { Input, InputGroup, InputRightElement} from '@chakra-ui/react';
 
 
 const Field = (props)=>{
-    console.log(props.name)
+
     return(
         <InputGroup margin={'5px'}>
             <InputRightElement cursor={'pointer'}>

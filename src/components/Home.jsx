@@ -5,8 +5,8 @@ import ToDo from './ToDoList'
 import DropDown from './Dropdown'
 import { Flex, Box, Button, Text } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux'
-import { addToDo, markAllCompleted, updateSearchTerm, filterToDo } from '../Redux/actions'; // Import your Redux actions here
-import { createSelector } from 'reselect';
+import { addToDo, markAllCompleted, updateSearchTerm } from '../Redux/actions'; // Import your Redux actions here
+
  
 
 
