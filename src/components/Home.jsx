@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Header from './Header'
 import Field from './Input'
-import ToDo from './To_do'
+import ToDo from './ToDoList'
 import DropDown from './Dropdown'
 import { Flex, Box, Button, Text } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux'
