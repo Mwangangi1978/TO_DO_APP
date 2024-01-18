@@ -36,7 +36,7 @@ const Home =()=>{
         }
     }
     const handleSearch = ()=>{
-        dispatch(updateSearchTerm(searchTerm))
+        dispatch(updateSearchTerm(item.searchTerm))
     }
     
     return(

@@ -12,9 +12,9 @@ export const removeToDo =(id) =>({
 
 
 
-export const toggleToDo =(id) =>({
+export const toggleToDo =(index) =>({
     type: TOGGLE_TO_DO,
-    payload:{id}
+    payload:{index}
 })
 
 export const updateSearchTerm =(searchTerm) =>({

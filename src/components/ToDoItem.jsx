@@ -23,7 +23,7 @@ const TodoItem = ({ toDo, index }) => {
                                 borderBottom={"1px"}
                                 borderColor={'black'}
                                 cursor={'pointer'}
-                                onClick={()=> dispatch(toggleToDo(toDo.index))}
+                                onClick={()=> dispatch(toggleToDo(index))}
                             >
                                 <Text
                                     style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}
