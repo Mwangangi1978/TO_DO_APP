@@ -20,6 +20,8 @@ const ToDo = ()=>{
         })
     })
 
+    console.log('filteres toDOs', filteredToDos)
+
     
 
     const dispatch = useDispatch();
@@ -39,7 +41,7 @@ const ToDo = ()=>{
                                 borderBottom={"1px"}
                                 borderColor={'black'}
                                 cursor={'pointer'}
-                                onClick={()=> dispatch(toggleToDo(index))}
+                                onClick={()=> dispatch(toggleToDo(toDo.index))}
                             >
                                 <Text
                                     style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}

@@ -24,8 +24,9 @@ export const toDoReducer = (state= initialState, action)=>{
         }
         case TOGGLE_TO_DO:
             return{
-                toDos: state.toDos.map((toDo, index)=>
-                index === action.payload.id ? {...toDo, completed:!toDo.completed}: toDo),
+                toDos: state.toDos.map((toDo, index)=>(
+                    index === action.payload.id ? {...toDo, completed:!toDo.completed}: toDo
+                )),
                 filter: state.filter,
                 searchTerm: state.searchTerm
                 
