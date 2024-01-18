@@ -10,16 +10,21 @@ const Home =()=>{
 
     
     return(
-        <Box>
+        <Box 
+            color={'#F5F5F5'}
+            borderRadius={'5px'}
+            mx={'auto'}
+            maxW={'4xl'}
+        >
             <Flex direction={'column'}>
                 <Header/>
-                <Input/>
+                <Input type={'add'}/>
                 <Flex justifyContent={'space-between'}>
                         <Flex>
-                            <DropDown/>
-                            <Button colorScheme='#725BFF'>Mark All Completed</Button>
+                            <DropDown />
+                            <Button colorScheme='#725BFF' marginLeft={'5px'}>Mark All Completed</Button>
                         </Flex>
-                        <Input/>
+                        <Input type={'search'}/>
                 </Flex>
                 <ToDo/>
             </Flex>
